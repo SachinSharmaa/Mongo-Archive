@@ -1,0 +1,18 @@
+{
+  "batchSize": 1000,
+  "retries": 2,
+  "transferMappings": [
+    {
+      "sourceCollection" : "live",
+      "destinationCollection" : "new",
+      "ttlIndexField" : "createdAt",
+      "removableFields" : ["name"]
+    },
+    {
+      "sourceCollection" : "live",
+      "destinationCollection" : "archive",
+      "ttlIndexField" : "createdAt",
+      "removableFields" : []
+    }
+  ]
+}
